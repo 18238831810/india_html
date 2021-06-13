@@ -32,7 +32,7 @@ $.extend({
         //获取用户余额
         $.getWithHeaders(url.balanceUrl,{},headers,(res)=>{
             if (res.code == 200){
-                $("#balance").text(res.data.amount);
+                $("#balance").text(res.data?res.data.amount:0.00);
             }
         });
         //定义存款提交按钮点击事件
