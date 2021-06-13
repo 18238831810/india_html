@@ -16,8 +16,6 @@ $.extend({
             alert(errorMsg.loginError);
             return;
         }
-        //获取用户和余额，并填充页面
-        $("#uid").text(headers.uid);
         //获取用户余额
         $.getWithHeaders(url.balanceUrl,{},headers,(res)=>{
             if (res.code == 200){
@@ -26,15 +24,23 @@ $.extend({
         });
         //定义存款提交按钮点击事件
         $("#button").click(()=>{
-            let amont = $("#amount").text().replace("₹","");
-            console.log(amont);
-            //按钮置灰
-
-            $.postWithHeaders(url.deposit,{amount:amont,paymentId:1},headers,(res)=>{
+            let options = {
+                paymentId:$("#paymentId").val(),
+                amount:$("#amount").val(),
+                payerAccount:$("#payerAccount").val(),
+                payerMobile:$("#payerMobile").val(),
+                payerName:$("#payerName").val(),
+                //IFSC编码为印度银行的编码,IFSC代付代付是使用
+                payerIfsc:$("#payerIfsc").val(),
+            };
+            $.postWithHeaders(url.withdraw,options,headers,(res)=>{
                 console.log(res);
                 //存款验证成功，调整到第三方存款页面
-                if (res.code == 200) window.location.href = res.data;
-                else alert(res.msg);
+                if (res.code == 200) {
+                    alert("suc");
+                }else {
+                    alert(res.msg);
+                }
             })
         });
     }

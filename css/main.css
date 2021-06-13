@@ -528,3 +528,90 @@ ul.ui-choose.choose-flex>li {
 .show {
 	display: block !important;
 }
+/*withdraw*/
+.withdraw-content {
+	background: #f6f6f6;
+}
+.withdraw-box {
+	margin: 0 auto;
+	width: 100%;
+}
+.account-top {
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+	text-align: left;
+	position: relative;
+}
+.account-top span {
+	font-size: 0.8rem;
+	height: 60px;
+	line-height: 60px;
+	color: #666;
+}
+.account-top span img {
+	width: 32px;
+	padding-left: 20px;
+}
+.account-top p {
+	font-size: 0.5px;
+	color: #bbbbbb;
+	margin-left: 24%;
+	position: absolute;
+	top: 65%;
+}
+.balance-box {
+	background: #fff;
+	height: 100px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding: 0 10px;
+}
+.balance-con {
+	margin: 0 10px;
+	padding-top: 25px;
+}
+.balance-con span {
+	font-size: 0.8rem;
+	color:#666;
+}
+.input_txt {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.input_txt span {
+	font-size: 1.0rem;
+	font-weight: bold;
+}
+.input_txt input {
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+	width: 80%;
+	padding: 0 5px;
+	border: 1px solid #ccc;
+}
+.withdraw_txt {
+	background: #fff;
+	height: 130px;
+	padding: 80px 20px 30px 20px;
+}
+.withdraw_txt p {
+	font-size: 0.8rem;
+	color: #bbbbbb;
+	padding-bottom:10px;
+}
+.btn_box {
+	background: #fff;
+	height: 370px;
+	text-align: center;
+}
+.btn_box button {
+	background: linear-gradient(to right, #25addd , #40e297);
+	line-height: 45px;
+	border-radius: 50px;
+	font-size: 1.0rem;
+	padding: 0 20%;
+	border: 1px solid #FFF;
+	color: #fff;
+}
