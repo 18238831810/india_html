@@ -550,7 +550,7 @@ ul.ui-choose.choose-flex>li {
 	color: #666;
 }
 .account-top span img {
-	width: 32px;
+	width: 48px;
 	padding-left: 20px;
 }
 .account-top p {
@@ -575,9 +575,12 @@ ul.ui-choose.choose-flex>li {
 	font-size: 0.8rem;
 	color:#666;
 }
+.balance-con p {
+	color:#666;
+}
 .input_txt {
 	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 .input_txt span {
 	font-size: 1.0rem;
@@ -588,13 +591,15 @@ ul.ui-choose.choose-flex>li {
 	line-height: 30px;
 	margin-left: 10px;
 	width: 80%;
-	padding: 0 5px;
+	padding: 0 8px;
 	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	border-radius: 5px;
 }
 .withdraw_txt {
 	background: #fff;
-	height: 130px;
-	padding: 80px 20px 30px 20px;
+	height: 110px;
+	padding: 190px 20px 30px 20px;
 }
 .withdraw_txt p {
 	font-size: 0.8rem;

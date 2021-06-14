@@ -10,23 +10,23 @@
 <body class="withdraw-content">
 <div class="withdraw-box">
     <div class="account-top">
-        <span>UPI account<img src="images/upi_icon.png" > ( 85884844Houeger@UPI ) </span>
-        <P>To your UPI account within 1 hour</P>
+        <span>UPI account<img src="images/upi_icon.png" > </span>
+        <P>To your UPI account within 2 hour</P>
     </div>
     <div class="balance-box">
         <div class="balance-con">
-            <span>Withdrawal Amount</span>
+            <span>Please complete the information</span>
            <div class="input_txt">
                <!--1:UPI代付，3：IFSC代付-->
-               <input type="text" id="paymentId" placeholder="收款类型" value="1" hidden="hidden"/>
+               <input type="text" id="paymentId" placeholder="payment method" value="1" hidden="hidden"/>
                <!--订单金额 最多保留两位小数点-->
-               <input type="text" id="amount" placeholder="收款金额"/>
+               <input type="text" id="amount" placeholder="Please enter the withdrawal amount"/>
                <!--收款人账号,payment_id为1时UPI格式（xxx@xxx），为3时银行卡号格式（10到32位数字）-->
-               <input type="text" id="payerAccount" placeholder="收款人账号"/>
+               <input type="text" id="payerAccount" placeholder="Please enter UPI account number"/>
                <!--收款人手机号 与用户银行卡绑定的手机号(印度手机号格式：例如9015****66)，错误的手机号将无法代付完成(UPI方式代付，不要求手机号的有效性，但必须格式正确)-->
-               <input type="text" id="payerMobile" placeholder="收款人手机号"/>
+               <input type="text" id="payerMobile" placeholder="Please enter your account phone number"/>
                <!--收款人名称 32字符以内-->
-               <input type="text" id="payerName" placeholder="收款人名称"/>
+               <input type="text" id="payerName" placeholder="Please enter UPI account name"/>
                <!--IFSC编码为印度银行的编码，每个银行不一样，格式为：CBIN0000000，payment_id为3时必传此参数*-->
                <input type="text" id="payerIfsc" placeholder="IFSC编码" hidden="hidden"/>
            </div>
