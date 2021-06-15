@@ -10,8 +10,13 @@ $.extend({
     },
     init() {
         //获取用户信息
-        headers.token = $.getQueryString('token');
-        headers.uid = $.getQueryString('uid');
+        //headers.token = $.getQueryString('token');
+        //headers.uid = $.getQueryString('uid');
+        const info = uiObject.getInfo();
+        if (!info || info == '')  alert(errorMsg.loginError);
+        const parse = JSON.parse(info);
+        headers.token = parse.token;
+        headers.uid = parse.uid;
         if (!headers.token || !headers.uid || headers.token == '' || headers.uid == '') {
             alert(errorMsg.loginError);
             return;
