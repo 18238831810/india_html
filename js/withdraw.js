@@ -23,7 +23,7 @@ $.extend({
         }
         //获取用户余额
         $.getWithHeaders(url.balanceUrl,{},headers,(res)=>{
-            if (res.code == 200){
+            if (res.code == 0){
                 $("#balance").text(res.data?res.data.amount:0.00);
             }
         });
@@ -41,7 +41,7 @@ $.extend({
             $.postWithHeaders(url.withdraw,options,headers,(res)=>{
                 console.log(res);
                 //存款验证成功，调整到第三方存款页面
-                if (res.code == 200) {
+                if (res.code == 0) {
                     alert("suc");
                 }else {
                     alert(res.msg);

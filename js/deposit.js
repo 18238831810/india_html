@@ -25,7 +25,7 @@ $.extend({
         $("#uid").text(headers.uid);
         //获取用户余额
         $.getWithHeaders(url.balanceUrl,{},headers,(res)=>{
-            if (res.code == 200){
+            if (res.code == 0){
                 $("#balance").text(res.data?res.data.amount:0.00);
             }
         });
@@ -38,7 +38,7 @@ $.extend({
             $.postWithHeaders(url.deposit,{amount:amont,paymentId:1},headers,(res)=>{
                 console.log(res);
                 //存款验证成功，调整到第三方存款页面
-                if (res.code == 200) window.location.href = res.data;
+                if (res.code == 0) window.location.href = res.data;
                 else alert(res.msg);
             })
         });
